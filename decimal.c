@@ -3,7 +3,7 @@ void key(a) {
 	int f = 2, count = 0;
 	while (f <= a)
 	{
-		if (a % f == 0)
+		if (a % f == 0)//입력된 수가 소수인지 아닌지 판별하는 코드 입니다.
 			count++;
 		f++;
 	}
