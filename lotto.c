@@ -20,7 +20,7 @@ int main()
         input(lotto);
         decide = command(lotto);
         if (decide == 'f') {
-            num--; // 'f'를 입력하면 뽑을 횟수를 줄임
+            num--;
         }
     }
     command2(lotto);
@@ -28,7 +28,7 @@ int main()
 
 void input(int list[])
 {
-    initialize(list); // 매번 입력할 때마다 번호 초기화
+    initialize(list);
     for (int i = 0; i < 6; i++)
     {
         int num;
@@ -57,7 +57,7 @@ char command(int list[])
     char decide;
     int random[6];
 
-    printf("명령을 입력하세요 ('l': 로또 번호 출력, 'f': 결과 확인, 's': 시작): ");
+    printf("명령을 입력하세요 ('l': 로또 번호 출력, 'f': 결과 확인): ");
     scanf(" %c", &decide);
 
     switch (decide)
@@ -69,12 +69,10 @@ char command(int list[])
             printf("%d ", list[i]);
         }
         printf("\n");
-        return command(list); // 다시 명령 입력을 받기 위해 함수를 재호출
+        return command(list);
     case 'f':
         answer(random);
         result(list, random);
-        break;
-    case 's':
         break;
     default:
         printf("올바른 명령을 입력하세요.\n");
@@ -161,7 +159,7 @@ void initialize(int list[])
 
 void command2(int list[])
 {
-    printf("명령을 입력하세요('r': 초기화, 'x': 종료)\n");
+    printf("명령을 입력하세요('r': 초기화, 'x': 종료)");
     char decide;
     scanf(" %c", &decide);
     switch (decide) {
